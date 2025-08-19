@@ -1,0 +1,50 @@
+.mainscreen {
+    contain: size layout paint style;
+}
+
+.stars1, .stars2, .stars3 {
+    position: absolute;
+    inset: 0;
+    background-size: 200px 100px;
+    background-repeat: repeat;
+}
+
+.stars1 {
+    background-image:
+        radial-gradient(3px 3px at 10px 50px, #ffffff, transparent 3px),
+        radial-gradient(3px 3px at 80px 20px, #ffffff, transparent 3px),
+        radial-gradient(3px 3px at 170px 70px, #ffffff, transparent 3px);
+    animation: stars-move1 30s linear infinite;
+}
+
+.stars2 {
+    background-image:
+        radial-gradient(1.5px 1.5px at 130px 30px, #ffffff, transparent 1.5px),
+        radial-gradient(1.5px 1.5px at 90px 80px, #ffffff, transparent 1.5px);
+    animation: stars-move2 30s linear infinite;
+}
+
+.stars3 {
+    background-image:
+        radial-gradient(2px 2px at 50px 25px, #ffffff, transparent 2px),
+        radial-gradient(2px 2px at 75px 100px, #ffffff, transparent 2px);
+    animation: stars-move3 30s linear infinite;
+}
+
+@keyframes stars-move1 {
+    to {
+        transform: translate(100px, 30px);
+    }
+}
+
+@keyframes stars-move2 {
+    to {
+        transform: translate(-60px, 80px);
+    }
+}
+
+@keyframes stars-move3 {
+    to {
+        transform: translate(-45px, -50px);
+    }
+}
