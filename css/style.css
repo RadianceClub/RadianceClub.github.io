@@ -44,13 +44,13 @@ body{
 }
 
 .mainscreen-container {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-color: black;
 }
 
 .mainscreen {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -63,8 +63,8 @@ body{
     z-index: -1;
 }
 
-.mainscreen h1 {
-    margin: 0;    
+.mainscreen-title {
+    margin: 0;
     color: white;
 }
 
@@ -78,10 +78,11 @@ body{
 }
 
 .centerize-container {
-    margin-top: 60%;
+    margin-top: 100vh;
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .centerize {
@@ -94,10 +95,6 @@ body{
     flex-direction: column;
 }
 
-.centerize-content {
-    width: 40%;
-}
-
 .our-game-container {
     width: 40%;
 }
@@ -106,9 +103,28 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .our-game-logo {
-    max-width: 400px;
+    max-width: min(400px, 90%);
+}
+
+@media (max-width: 1100px) {
+    .infobox, .our-game-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .mainscreen-title {
+        font-size: 24px;
+    }
+
+    .mainscreen {}
+
+    .centerize-container, .centerize {
+        width: 100%;
+    }
 }
