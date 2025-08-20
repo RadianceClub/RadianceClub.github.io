@@ -103,7 +103,6 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -112,7 +111,7 @@ body{
 }
 
 .our-game-description {
-    max-width: calc(90% - 400px); /* 400px - ширина логотипа игры */
+    /*max-width: calc(90% - 400px); !* 400px - ширина логотипа игры *!*/
 }
 
 @media (max-width: 1100px) {
@@ -130,5 +129,9 @@ body{
 
     .centerize-container, .centerize {
         width: 100%;
+    }
+
+    .our-game {
+        flex-wrap: wrap;
     }
 }
